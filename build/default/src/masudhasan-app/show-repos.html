@@ -1,15 +1,14 @@
-<link rel="import" href="../../bower_components/polymer/polymer-element.html"/>
-<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html"/>
-<link rel="import" href="../../bower_components/iron-icons/iron-icons.html"/>
+<html><head><link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 
-<dom-module id="show-repos"> 
+</head><body><dom-module id="show-repos"> 
 <template>
-<style is = "custom-style">
+<style is="custom-style">
    .big {
       --iron-icon-height: 150px;
       --iron-icon-width: 150px;
        background-image: url("imgs/repo.png");
-       background-size: 150px 150px;
        background-repeat: no-repeat;
        background-position: center; 
    }
@@ -29,7 +28,7 @@
 	
 </style>
 	<!-- <paper-spinner-lite alt="loading repositories" active="{{showSpinner}}" class="orange"></paper-spinner-lite> -->
-	<iron-ajax auto url="https://api.github.com/users/hasanmasud/repos" handle-as="json" on-response="handleResponse"></iron-ajax> 
+	<iron-ajax auto="" url="https://api.github.com/users/hasanmasud/repos" handle-as="json" on-response="handleResponse"></iron-ajax> 
 		<template is="dom-repeat" items="{{repos}}">
 			<div class="floatybox">
 				<div class="repo">
@@ -65,3 +64,4 @@
 	window.customElements.define(ShowRepos.is, ShowRepos);
 </script></dom-module>
 
+</body></html>
