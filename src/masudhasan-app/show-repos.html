@@ -33,7 +33,7 @@
 		<template is="dom-repeat" items="{{repos}}">
 			<div class="floatybox">
 				<div class="repo">
-					<a target="_blank" href="{{item.html_url}}"><iron-icon class="big"></iron-icon></a>
+					<a target="_blank" href="{{item.html_url}}" title="{{item.name}}" ><iron-icon class="big"></iron-icon></a>
 				</div>
 				<div class="reponame">
 					<span class="">{{item.name}}</span>
