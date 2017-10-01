@@ -1,0 +1,124 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html"/>
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html"/>
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html"/>
+<link rel="import" href="../bower_components/google-chart/google-chart.html"/>
+<link rel="import" href="../bower_components/iron-icons/image-icons.html">
+
+
+<dom-module id="about-me"> 
+	<template>
+			<style is = "custom-style">
+				  .floatybox {
+				     			
+					}
+          .box{
+              box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2) ;
+              padding: 10px;
+              margin: 5px;
+              border-radius: 5px;
+              background-color: #fff;
+              color: #757575;
+              vertical-align: top;
+              
+          }
+          .myimage{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-image: url("../imgs/me.ico");
+            line-height: 64px;
+            text-align: center;
+          }
+          .info{
+            font-size: 12px;
+            margin: 5px;
+            color: #000000;
+          }
+          .imagebox{
+           /* background-color: rgba(87, 187, 138, 0.74);*/
+            height:300px;
+            width: 205px;
+          }
+          .descriptionbox{
+            width: 97%;
+            height: 300px;
+          }
+          iron-icon:hover {
+            fill: var(--google-blue-700);
+          }
+          p>a{
+            color: black;
+            margin: 2px;
+          }
+          p>span{
+            color: black;
+            margin: 2px;
+          }
+          p>a:link {
+            text-decoration: none;
+          }
+           p>a:hover {
+            text-decoration: underline;
+            color: var(--google-blue-700);
+          }
+          p{
+            margin: 2px;
+          }
+			</style>
+     <table>
+        <tr>
+            <td>
+              <div class="floatybox">
+                 <div class="box imagebox">
+                    <div class="myimage"></div>
+                    <div class="info">
+                      <p> <iron-icon icon="icons:face"></iron-icon> <a target="_blank" href="https://github.com/hasanmasud">Masud Hasan</a></p>
+                      <p><iron-icon icon="icons:work"></iron-icon><span>Java Developer</span></p>
+                       <p><iron-icon icon="icons:mail"></iron-icon>
+                          <a href="mailto:masud.iem@gmail.com">masud.iem@gmail.com</a></p>
+                    </div>
+                </div>
+              </div>
+            </td>
+            <td width="100%">
+               <div class="floatybox">
+                 <div class="box descriptionbox"> 
+
+                    <div style="display: inline-block; width: 50%">
+                      <google-chart
+                        type="bar"
+                        options='{"title": "Programming Language"}'
+                        cols='[{"label": "Programming", "type": "string"},{"label": "Skill", "type": "number"}]'
+                        rows='[["JAVA", 100],["JAVASCRIPT",75],["UNIX SHELL",50],["HTML",50],["CSS", 30],["C", 25],["C++", 25]]'>
+                      </google-chart>
+                    </div>   
+                     <div style="display: inline-block;">
+                      <google-chart
+                        type="bar"
+                        options='{"title": "Database"}'
+                        cols='[{"label": "DB", "type": "string"},{"label": "DB", "type": "number"}]'
+                        rows='[["ORACLE", 100],["DB2",50],["MONGODB",50]]'>
+                      </google-chart>
+                    </div> 
+                </div>
+              </div>
+            </td>
+        </tr>
+     </table>
+			</template> 
+	 </template> 
+	 <script>
+		// Your new element extends the Polymer.Element base class
+		/**
+	     * @customElement
+	     * @polymer
+	     */
+		class AboutMe extends Polymer.Element {
+				static get is() {
+					return 'about-me';
+				}
+		}
+		window.customElements.define(AboutMe.is, AboutMe);
+	</script>
+</dom-module>
+
