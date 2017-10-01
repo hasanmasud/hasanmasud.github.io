@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>Masud Hasan</title>
+    <meta name="description" content="masudhasan description">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="text/javascript" src="/src/masudhasan-app/js/jquery-3.2.1.min.js"></script>
+    <link rel="imort"  href="/bower_components/polymer/polymer.html"/>
+    <link rel="imort"  href="/bower_components/app-drawer-layout/app-drawer-layout/app-drawer-layout.html"/>
+    <link rel="import" href="/bower_components/app-layout/app-drawer/app-drawer.html"/>
+    <link rel="import" href="/bower_components/app-layout/app-header/app-header.html"/>
+    <link rel="import" href="/bower_components/app-layout/app-toolbar/app-toolbar.html"/>
+    <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html"/>
+    <link rel="import" href="/bower_components/iron-icons/iron-icons.html"/>
+    <link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html"/>
+    <link rel="import" href="/bower_components/paper-progress/paper-progress.html"/>
+    <link rel="import" href="/bower_components/paper-styles/default-theme.html"/>
+    <link rel="import" href="/src/masudhasan-app/about-me.html"/>
+    <link rel="import" href="/src/masudhasan-app/show-repos.html"/>
+    <link rel="import" href="/src/masudhasan-app/simple-menu.html"/>
+  </head>
+  <body>
+<custom-style>
+  <style is="custom-style">
+   .floatybox {
+      padding: 2px;
+    }
+    :host {
+      --app-drawer-width: 200px;
+    }
+    html, body {
+      margin: 0;
+      font-family: 'Roboto', 'Noto', sans-serif;
+      font-size: 12px;
+      -webkit-font-smoothing: antialiased;
+      background: #f1f1f1;
+      max-height: 368px;
+    }
+    app-toolbar {
+      background-color: #4285f4;
+      color: #fff;
+    }
+    paper-icon-button {
+      --paper-icon-button-ink-color: white;
+    }
+    paper-icon-button + [main-title] {
+      margin-left: 24px;
+    }
+    paper-progress {
+      display: block;
+      width: 100%;
+      --paper-progress-active-color: rgba(255, 255, 255, 0.5);
+      --paper-progress-container-color: transparent;
+    }
+    app-header {
+      @apply --layout-fixed-top;
+      color: #fff;
+      --app-header-background-rear-layer: {
+        background-color: #ef6c00;
+      };
+    }
+    app-drawer {
+      --app-drawer-scrim-background: rgba(0, 0, 100, 0.8);
+      --app-drawer-content-container: {
+        background-color: #FFFFFF;
+      }
+    }
+    #pagecontainer {
+      padding-top: 70px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+    }
+    adjustmaincontent{
+      padding-left: 260px;
+    }
+    app-drawer-layout:not([narrow]) [drawer-toggle] {
+    display: none;
+  }
+    paper-progress {
+      display: block;
+      width: 100%;
+      margin: 0px 0;
+    }
+    paper-progress.slow {
+      --paper-progress-indeterminate-cycle-duration: 2s;
+    }
+    paper-progress.blue {
+      --paper-progress-active-color: var(--paper-light-blue-500);
+      --paper-progress-secondary-color: var(--paper-light-blue-100);
+    }
+    paper-progress.green {
+    --paper-progress-active-color: var(--paper-green-500);
+      --paper-progress-secondary-color: var(--paper-green-100);
+    }
+    
+  simple-menu,
+    simple-menubar {
+       display: inline-block;
+       width: 100%;
+     }
+
+    simple-menu a {
+       display: block;
+     }
+
+    simple-menubar a,
+    simple-menu a {
+       padding: 15px 20px;
+       color: var(--primary-text-color);
+       text-decoration: none;
+     }
+    simple-menubar a.iron-selected,
+    simple-menu a.iron-selected {
+       color: white;
+     }
+
+    simple-menu a[disabled],
+    simple-menubar a[disabled] {
+       color: var(--google-grey-300);
+     }
+     
+    .horizontal-section {
+       padding-top: 70px;
+       margin-bottom: 20px;
+     }
+
+    .row {
+       height: 120px;
+     }
+
+    [hidden] {
+       display: none;
+     }
+     
+  div.headermessage{
+    padding-left: 10px;
+    text-align: left;
+  }
+     
+  </style>
+</custom-style>
+<app-header reveals="true">
+  <app-toolbar>
+    <paper-icon-button icon="menu" onclick="drawer.toggle();adjustmainContent();"></paper-icon-button>
+    <div main-title="menu">Masud Hasan</div>
+    <div class="headermessage"></div>
+    <!--<paper-progress class="slow green" indeterminate="" bottom-item=""></paper-progress>-->
+  </app-toolbar>
+</app-header>
+<app-drawer id="drawer" swipe-open="">
+  <div class="horizontal-section">
+        <simple-menu>
+          <a href="javascript:loadView('about-me');" role="menuitem">About Me</a>
+          <a href="javascript:loadView('show-repos');" role="menuitem">My GitHub Repositories</a>
+          <!--
+          <a href="javascript:loadView('')" role="menuitem">Java</a>
+          <a href="javascript:loadView('')" role="menuitem">Item 1</a>
+          <a href="javascript:void(0)" role="menuitem">Item 3</a>
+          <a href="javascript:void(0)" role="menuitem">Item 4</a>
+          -->
+       </simple-menu>
+      </div>
+</app-drawer>
+<div id="pagecontainer">
+   <about-me>
+    </about-me>
+
+</div>
+<script type="text/javascript">
+  $(window, document, undefined).ready(function() {
+  });
+  var adjustmainContent=function (){
+    $("#pagecontainer").css("padding-left","260px");  
+  }
+  var disadjustmainContent=function (){
+    $("#pagecontainer").css("padding-left","2px");  
+  }
+  loadView = function(elementname){
+    var container = document.getElementById("pagecontainer");
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
+    }
+    var element = document.createElement(elementname);
+    container.appendChild(element);
+    drawer.toggle();disadjustmainContent();
+  }
+</script>
+<script>
+</script>
+</body>
+</html>
