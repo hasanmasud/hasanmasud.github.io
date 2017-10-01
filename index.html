@@ -24,9 +24,12 @@
 <body>
 <custom-style>
   <style is="custom-style">
-  :host {
-	  --app-drawer-width: 200px;
-	}
+   .floatybox {
+      padding: 2px;
+    }
+    :host {
+  	  --app-drawer-width: 200px;
+  	}
     html, body {
       margin: 0;
       font-family: 'Roboto', 'Noto', sans-serif;
@@ -143,9 +146,7 @@
     <paper-icon-button icon="menu" onclick="drawer.toggle();adjustmainContent();"></paper-icon-button>
     <div main-title="menu">Masud Hasan</div>
     <div class="headermessage"></div>
-   	<greet-user></greet-user>	 
-	<log-out url="/logout"></log-out>
-    <paper-progress class="slow green" indeterminate="" bottom-item=""></paper-progress>
+    <!--<paper-progress class="slow green" indeterminate="" bottom-item=""></paper-progress>-->
   </app-toolbar>
 </app-header>
 <app-drawer id="drawer" swipe-open="">
