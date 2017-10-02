@@ -9,6 +9,7 @@
 			<style is = "custom-style">
 				  .floatybox {
 				     			padding: 2px;
+                  display: inline-block;
 					}
           .box{
               box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2) ;
@@ -18,11 +19,10 @@
               background-color: #fff;
               color: #757575;
               vertical-align: top;
-              
           }
           .myimage{
-            height: 200px;
-            width: 200px;
+            min-height: 200px;
+            min-width: 100%px;
             border-radius: 100%;
             background-image: url("imgs/me.ico");
             background-repeat: no-repeat;
@@ -35,13 +35,8 @@
             color: #000000;
           }
           .imagebox{
-           /* background-color: rgba(87, 187, 138, 0.74);*/
             height:300px;
             width: 205px;
-          }
-          .descriptionbox{
-            width: 97%;
-            height: 300px;
           }
           iron-icon:hover {
             fill: var(--google-blue-700);
@@ -65,9 +60,6 @@
             margin: 2px;
           }
 			</style>
-     <table>
-        <tr>
-            <td>
               <div class="floatybox">
                  <div class="box imagebox">
                     <div class="myimage"></div>
@@ -81,19 +73,16 @@
                     </div>
                 </div>
               </div>
-            </td>
-            <td width="100%">
-               <div class="floatybox">
-                 <div class="box descriptionbox"> 
-
-                    <div style="display: inline-block; width: 50%">
+              <div class="floatybox box">
+                    <div style="display: inline-block;">
                       <google-chart
                         type="bar"
                         options='{"title": "Programming Language"}'
                         cols='[{"label": "Programming", "type": "string"},{"label": "Skill", "type": "number"}]'
                         rows='[["JAVA", 100],["JAVASCRIPT",75],["UNIX SHELL",50],["HTML",50],["CSS", 30],["C", 25],["C++", 25]]'>
                       </google-chart>
-                    </div>   
+                    </div>
+                  
                      <div style="display: inline-block;">
                       <google-chart
                         type="bar"
@@ -101,12 +90,8 @@
                         cols='[{"label": "DB", "type": "string"},{"label": "DB", "type": "number"}]'
                         rows='[["ORACLE", 100],["DB2",50],["MONGODB",50]]'>
                       </google-chart>
-                    </div> 
-                </div>
+                    </div>
               </div>
-            </td>
-        </tr>
-     </table>
 			</template> 
 	 </template> 
 	 <script>
