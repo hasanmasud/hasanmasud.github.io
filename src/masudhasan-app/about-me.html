@@ -77,16 +77,24 @@
                     <div style="display: inline-block;">
                       <google-chart
                         type="bar"
-                        options='{"title": "Programming Language"}'
+                        options='{"animation": {"duration": "1000", "startup":true,"easing":"inout"},"hAxis": {"title": "skill in relative %","minValue" : 0, "maxValue": 100},"title": "Programming Language","colors" : ["#4285f4"]}'
                         cols='[{"label": "Programming", "type": "string"},{"label": "Skill", "type": "number"}]'
-                        rows='[["JAVA", 100],["JAVASCRIPT",75],["UNIX SHELL",50],["HTML",50],["CSS", 30],["C", 25],["C++", 25]]'>
+                        rows='[
+                                ["JAVA", 100],
+                                ["JAVASCRIPT",75],
+                                ["UNIX SHELL",50],
+                                ["HTML",50],
+                                ["CSS", 30],
+                                ["C", 25],
+                                ["C++", 25]
+                              ]'>
                       </google-chart>
                     </div>
                   
                      <div style="display: inline-block;">
                       <google-chart
                         type="bar"
-                        options='{"title": "Database"}'
+                         options='{"animation": {"duration": "1000", "startup":true,"easing":"inout"},"hAxis": {"title": "skill in relative %","minValue" : 0, "maxValue": 100},"title": "Database","colors" : ["#4285f4"]}'
                         cols='[{"label": "DB", "type": "string"},{"label": "DB", "type": "number"}]'
                         rows='[["ORACLE", 100],["DB2",50],["MONGODB",50]]'>
                       </google-chart>
