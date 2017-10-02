@@ -21,13 +21,12 @@
               vertical-align: top;
           }
           .myimage{
-            min-height: 200px;
-            min-width: 100%px;
+            height: 200px;
+            width: 190px;
             border-radius: 100%;
             background-image: url("imgs/me.ico");
             background-repeat: no-repeat;
-            line-height: 64px;
-            text-align: center;
+            background-position: center;
           }
           .info{
             font-size: 12px;
@@ -35,8 +34,8 @@
             color: #000000;
           }
           .imagebox{
-            height:300px;
-            width: 205px;
+            width: 400px;
+            height: 300px;
           }
           iron-icon:hover {
             fill: var(--google-blue-700);
@@ -60,8 +59,8 @@
             margin: 2px;
           }
 			</style>
-              <div class="floatybox">
-                 <div class="box imagebox">
+              <div class="floatybox box">
+                 <div class="imagebox">
                     <div class="myimage"></div>
                     <div class="info">
                       <p> <iron-icon icon="icons:face"></iron-icon> <a target="_blank" href="https://github.com/hasanmasud">Masud Hasan</a></p>
@@ -73,6 +72,9 @@
                     </div>
                 </div>
               </div>
+
+
+
               <div class="floatybox box">
                     <div style="display: inline-block;">
                       <google-chart
@@ -98,7 +100,10 @@
                               ]'>
                       </google-chart>
                     </div>
-                  
+                </div>
+
+
+                   <div class="floatybox box">
                      <div style="display: inline-block;">
                       <google-chart
                         type="bar"
@@ -113,6 +118,8 @@
                       </google-chart>
                     </div>
               </div>
+
+
 			</template> 
 	 </template> 
 	 <script>
