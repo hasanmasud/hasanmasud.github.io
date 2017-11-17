@@ -1,96 +1,149 @@
-<link rel="import" href="../../bower_components/polymer/polymer-element.html"/>
-<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html"/>
-<link rel="import" href="../../bower_components/iron-icons/iron-icons.html"/>
-<link rel="import" href="../../bower_components/google-chart/google-chart.html"/>
-<link rel="import" href="../../bower_components/iron-icons/image-icons.html"/>
-
-<dom-module id="about-me"> 
-	<template>
-			<style is = "custom-style">
-				  .floatybox {
-				     	padding: 2px;
-              display: inline-block;
-					}
-          .box{
-              box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2) ;
-              padding: 10px;
-              margin: 5px;
-              border-radius: 5px;
-              background-color: #fff;
-              color: #757575;
-              vertical-align: top;
-          }
-          .myimage{
-            height: 200px;
-            width: 190px;
-            border-radius: 100%;
-            background-image: url("imgs/me.ico");
-            background-repeat: no-repeat;
-            background-position: center;
-          }
-          .info{
-            font-size: 12px;
-            margin: 5px;
-            color: #000000;
-          }
-          .imagebox{
-            width: 400px;
-            height: 300px;
-          }
-          iron-icon:hover {
-            fill: var(--google-blue-700);
-          }
-          p>a{
-            color: black;
-            margin: 2px;
-          }
-          p>span{
-            color: black;
-            margin: 2px;
-          }
-          p>a:link {
-            text-decoration: none;
-          }
-           p>a:hover {
-            text-decoration: underline;
-            color: var(--google-blue-700);
-          }
-          p{
-            margin: 2px;
-          }
-			</style>
-              <div class="floatybox box">
-                 <div class="imagebox">
-                    <div class="myimage"></div>
-                    <div class="info">
-                      <p> <iron-icon icon="icons:face"></iron-icon> <a target="_blank" href="https://github.com/hasanmasud">Masud Hasan</a></p>
-                      <p><iron-icon icon="icons:work"></iron-icon><span>Java Developer</span></p>
-                       <p><iron-icon icon="icons:mail"></iron-icon>
-                          <a href="mailto:masud.iem@gmail.com">masud.iem@gmail.com</a></p>
-                        <p><iron-icon icon="icons:file-download"></iron-icon>
-                        <a target="_blank" href="https://docs.google.com/a/hasanmasud.github/viewer?url=https://hasanmasud.github.io/Masud_Hasan-8_years_JAVA_Experience.docx">Resume</a></p>
-                    </div>
-                </div>
-              </div>
+<link rel="import"
+	href="../../bower_components/polymer/polymer-element.html" />
+<link rel="import"
+	href="../../bower_components/iron-ajax/iron-ajax.html" />
+<link rel="import"
+	href="../../bower_components/iron-icons/iron-icons.html" />
+<link rel="import"
+	href="../../bower_components/google-chart/google-chart.html" />
+<link rel="import"
+	href="../../bower_components/iron-icons/image-icons.html" />
+<link rel="import"
+	href="../../bower_components/social-media-icons/social-media-icons.html">
 
 
+<dom-module id="about-me"> <template>
+<style is="custom-style">
+.floatybox {
+	padding: 2px;
+	display: inline-block;
+}
 
-              <div class="floatybox box">
-                    <div style="display: inline-block;">
-                      <google-chart
-                        type="bar"
-                        options='{
+.box {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
+		rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	margin: 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #757575;
+	vertical-align: top;
+}
+
+.myimage {
+	height: 200px;
+	width: 190px;
+	border-radius: 100%;
+	background-image: url("imgs/mypic.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.info {
+	font-size: 12px;
+	margin: 5px;
+	color: #000000;
+}
+
+.imagebox {
+	width: 400px;
+	height: 300px;
+}
+
+iron-icon:hover {
+	fill: var(- -google-blue-700);
+}
+
+p>a {
+	color: black;
+	margin: 2px;
+}
+
+p>span {
+	color: black;
+	margin: 2px;
+}
+
+p>a:link {
+	text-decoration: none;
+}
+
+p>a:hover {
+	text-decoration: underline;
+	color: var(- -google-blue-700);
+}
+
+p {
+	margin: 2px;
+}
+</style>
+<div class="floatybox box">
+	<div class="imagebox">
+		<div class="info">
+			<p>
+				<iron-icon icon="icons:face"></iron-icon>
+				<a target="_blank" href="https://github.com/hasanmasud">Masud
+					Hasan</a>
+			</p>
+			<p>
+				<iron-icon icon="icons:work"></iron-icon>
+				<span>Java Developer</span>
+			</p>
+			<p>
+				<iron-icon icon="icons:mail"></iron-icon>
+				<a href="mailto:masud.iem@gmail.com">masud.iem@gmail.com</a>
+			</p>
+			<p>
+				<iron-icon icon="icons:file-download"></iron-icon>
+				<a target="_blank"
+					href="https://docs.google.com/a/hasanmasud.github/viewer?url=https://hasanmasud.github.io/Masud_Hasan-8_years_JAVA_Experience.docx">Resume</a>
+			</p>
+
+			<p>
+				<social-media-icons icon="github" size="20"></social-media-icons>
+				<a target="_blank" href="https://github.com/hasanmasud">Github</a>
+			</p>
+
+			<p>
+				<social-media-icons icon="linkedin" size="20"></social-media-icons>
+				<a target="_blank"
+					href="https://www.linkedin.com/in/masud-hasan-80a1b536/">Linkedin</a>
+			</p>
+
+			<p>
+				<social-media-icons icon="facebook" size="20"></social-media-icons>
+				<a target="_blank" href="https://www.facebook.com/masud.hasan.9889">Facebook</a>
+			</p>
+
+			<p>
+				<social-media-icons icon="twitter" size="20"></social-media-icons>
+				<a target="_blank" href="https://twitter.com/hasanmasudiem">Twitter</a>
+			</p>
+
+		</div>
+	</div>
+</div>
+
+
+
+<div class="floatybox box">
+	<div style="display: inline-block;">
+		<google-chart type="bar"
+			options='{
                                   "animation": {"duration": "1000", "startup":true,"easing":"inout"},
                                   "hAxis": {"title": "skill in relative %","minValue" : 0, "maxValue": 100},
                                   "title": "Programming Language",
                                   "bars": "horizontal",                   
                                    "colors" : ["#4285f4"]}'
-                        cols='[
+			cols='[
                                 {"label": "Programming", "type": "string"},
                                 {"label": "Skill", "type": "number"}
                               ]'
-                        rows='[
+			rows='[
                                 ["JAVA", 100],
+                                ["Groovy", 50],
+                                ["Scala", 50],
+                                ["Python", 25],
                                 ["JAVASCRIPT",75],
                                 ["UNIX SHELL",50],
                                 ["HTML",50],
@@ -98,42 +151,51 @@
                                 ["C", 25],
                                 ["C++", 25]
                               ]'>
-                      </google-chart>
-                    </div>
-                </div>
+		</google-chart>
+	</div>
+</div>
 
+<div class="floatybox box">
+	<div style="display: inline-block;">
+		<google-chart type="bar"
+			options='{
+                                  "animation": {"duration": "1000", "startup":true,"easing":"inout"},
+                                  "hAxis": {"title": "skill in relative %","minValue" : 0, "maxValue": 100},
+                                  "title": "Frameworks",
+                                  "bars": "horizontal", 
+                                  "colors" : ["#4285f4"]}'
+			cols='[{"label": "FRAMEWORK", "type": "string"},{"label": "Skill", "type": "number"}]'
+			rows='[["Spring", 100],["Spring Boot",50],["Struts",50],["Angular JS",50],["Polymer",50]]'>
+		</google-chart>
+	</div>
+</div>
 
-                   <div class="floatybox box">
-                     <div style="display: inline-block;">
-                      <google-chart
-                        type="bar"
-                         options='{
+<div class="floatybox box">
+	<div style="display: inline-block;">
+		<google-chart type="bar"
+			options='{
                                   "animation": {"duration": "1000", "startup":true,"easing":"inout"},
                                   "hAxis": {"title": "skill in relative %","minValue" : 0, "maxValue": 100},
                                   "title": "Database",
                                   "bars": "horizontal", 
                                   "colors" : ["#4285f4"]}'
-                        cols='[{"label": "DB", "type": "string"},{"label": "DB", "type": "number"}]'
-                        rows='[["ORACLE", 100],["DB2",50],["MONGODB",50]]'>
-                      </google-chart>
-                    </div>
-              </div>
+			cols='[{"label": "DB", "type": "string"},{"label": "Skill", "type": "number"}]'
+			rows='[["ORACLE", 100],["DB2",50],["MONGODB",50],["ROCKS DB",40]]'>
+		</google-chart>
+	</div>
+</div>
 
-
-			</template> 
-	 </template> 
-	 <script>
-		// Your new element extends the Polymer.Element base class
-		/**
+</template> </template> <script>
+	// Your new element extends the Polymer.Element base class
+	/**
 	     * @customElement
 	     * @polymer
 	     */
-		class AboutMe extends Polymer.Element {
-				static get is() {
-					return 'about-me';
-				}
+	class AboutMe extends Polymer.Element {
+		static get is() {
+			return 'about-me';
 		}
-		window.customElements.define(AboutMe.is, AboutMe);
-	</script>
-</dom-module>
+	}
+	window.customElements.define(AboutMe.is, AboutMe);
+</script> </dom-module>
 
